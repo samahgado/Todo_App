@@ -1,0 +1,26 @@
+*,
+*::after,
+*::before{
+    
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+:root{
+    --clr-white:rgb(230, 230, 230);
+    --clr-dark:rgb(32, 32, 32);
+    --clr-pink:#ffafbd;
+    --clr-green:#c9ffbf;
+    --clr-yellow:#f6e58d;
+}
+
+body{
+    background-color: var(--clr-dark);
+    background-image: url("https://janschreiber.github.io/img2/black-chalk.jpg");
+    color: var(--clr-white);
+    font-family: 'Indie Flower', 'Comic Sans', cursive;
+    font-size: 1rem;
+    
+}
