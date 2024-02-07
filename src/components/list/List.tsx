@@ -1,10 +1,18 @@
-import React from 'react'
-import "./List.css"
+import "./List.css";
+import { useTodoStore } from "../../store/TodoStore";
 
-const List = () => {
+const List = ({ list }: any) => {
+  const activeListId = useTodoStore((state) => state.activListId);
+  const selectedList = useTodoStore((state) => state.selectedListId);
+
   return (
-    <div>List</div>
-  )
-}
+    <li
+      className={`list ${list.id === activeListId && "active-list"}`}
+      onClick={() => selectedList(list.id)}
+    >
+      💼 {list.name}
+    </li>
+  );
+};
 
-export default List
+export default List;

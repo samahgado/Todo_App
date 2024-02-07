@@ -1,5 +1,10 @@
 .wrapper {
-  padding: 2rem;
+  
+  display: grid;
+  --space:2rem;
+  gap: var(--space);
+ 
+  
 }
 .title {
   font-size: clamp(2.5rem, 4vw + 1rem, 7rem);
@@ -36,4 +41,17 @@
   bottom: 0;
   left: 50%;
   transform: translate(-50%);
+}
+.appContainer{
+  display: grid;
+  gap: var(--space);
+  
+}
+/* will see container and media kevien you tube */
+@media (min-width:600px){
+  .appContainer{
+    display: flex;
+    justify-content: space-evenly;
+  }
+
 }

@@ -1,0 +1,25 @@
+.lists {
+  display: grid;
+  gap: 1.5rem;
+}
+.lists-title {
+  
+  letter-spacing: 1.2px;
+  font-size: var(--fs-large);
+  font-weight: 600;
+  background: -webkit-linear-gradient(
+    
+    var(--clr-pink),
+    var(--clr-green),
+    var(--clr-yellow),
+    var(--clr-pink)
+   
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+}
+ul.lists-content {
+  line-height: 2;
+  list-style: none;
+}

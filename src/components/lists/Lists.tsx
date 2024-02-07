@@ -1,9 +1,24 @@
 import React from 'react'
 import "./Lists.css"
+import { useTodoStore } from '../../store/TodoStore'
+import List from '../list/List'
+import { ListType } from '../../store/TodoStore'
+import FormList from '../formList/FormList'
 
 const Lists = () => {
+  const lists = useTodoStore(state => state.lists)
+
   return (
-    <div>Lists</div>
+    <div className='lists'> 
+    <h2 className='lists-title'>
+      My lists
+    </h2>
+    <ul className='lists-content'>
+      {lists.map((list:ListType)=>(<List list={list} key={list.id} />))}
+    </ul>
+    <FormList/>
+  
+    </div>
   )
 }
 
