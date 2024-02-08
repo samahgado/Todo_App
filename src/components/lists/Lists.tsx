@@ -14,7 +14,7 @@ const Lists = () => {
       My lists
     </h2>
     <ul className='lists-content'>
-      {lists.map((list:ListType)=>(<List list={list} key={list.id} />))}
+      {lists?.length > 0 ?lists.map((list:ListType)=>(<List list={list} key={list.id} />)): <p >🙄 No Lists yet 👇</p> }
     </ul>
     <FormList/>
   
