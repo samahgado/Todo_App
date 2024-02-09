@@ -1,5 +1,6 @@
 import { create } from 'zustand'
 import {testLists} from "../data"
+import { devtools , persist } from 'zustand/middleware';
 
  export type TodoType={
     id:number ;
@@ -29,7 +30,7 @@ interface ListsState {
 remainingTodos:()=>void
 }
 
-export const useTodoStore = create<ListsState>()((set) => ({
+export const useTodoStore = create<ListsState>()(devtools(persist((set) => ({
     lists:testLists,
     activListId :null,
     selectedListId : (id) => set(state => ({activListId :id})),
@@ -39,4 +40,4 @@ export const useTodoStore = create<ListsState>()((set) => ({
     editTodoStatus:(todoId)=>set(state => ({lists:state.lists.map((list)=>(list.id === state.activListId ? {...list,todos:list.todos.map((todo)=>(todo.id === todoId ? {...todo,completed:!todo.completed}: todo))}:list))})),
     remainingTodos:()=>set((state)=>({lists:state.lists.map((list)=>(list.id === state.activListId ? {...list,todos:list.todos.filter((todo) => todo.completed === false)}:list))}))
 
-}))
+}),{name:"todos"})))
