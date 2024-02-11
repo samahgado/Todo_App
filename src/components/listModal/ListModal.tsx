@@ -20,13 +20,11 @@ const ListModal = () => {
   ).length;
 
   return (
-    <>
-      <div className="modal-overlay"></div>
-      <div className="modal-content">
+    
+     
+      <div className="modal">
         <div className="modal-header">
-          <p className="close" onClick={() => selectedListId(null)}>
-            &times;
-          </p>
+          
           <h3 className="modal-header-title">{activeList?.name}</h3>
           <p className="modal-header-remains">
             {remainingTodosNumber && remainingTodosNumber > 0
@@ -54,7 +52,7 @@ const ListModal = () => {
           </div>
         </div>
       </div>
-    </>
+    
   );
 };
 

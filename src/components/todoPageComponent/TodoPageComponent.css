@@ -3,7 +3,7 @@
   display: grid;
   --space:2rem;
   gap: var(--space);
- margin-block-end: var(--space);
+ padding-bottom: 5rem;
  
   
 }.tabs{
@@ -15,11 +15,7 @@
   font-size: clamp(2.5rem, 4vw + 1rem, 7rem);
   font-weight: 700;
   letter-spacing: 2px;
-
-    
-    color: var(--clr-pink)
-  ;
-  
+color: var(--clr-green);
   position: relative;
   padding-bottom: 1rem;
   text-align: center;
@@ -33,7 +29,6 @@
   background: -webkit-linear-gradient(
     left,
     var(--clr-pink),
-    var(--clr-green),
     var(--clr-yellow),
     var(--clr-pink)
   );
@@ -48,7 +43,7 @@
   gap: var(--space);
   
 }
-
+/* will see container and media kevien you tube */
 @media (min-width:600px){
   .appContainer{
     display: flex;
