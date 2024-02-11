@@ -7,16 +7,7 @@
   letter-spacing: 1.2px;
   font-size: var(--fs-large);
   font-weight: 600;
-  background: -webkit-linear-gradient(
-    
-    var(--clr-pink),
-    var(--clr-green),
-    var(--clr-yellow),
-    var(--clr-pink)
-   
-  );
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--clr-pink)
   
 }
 ul.lists-content {

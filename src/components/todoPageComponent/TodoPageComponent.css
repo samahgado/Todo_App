@@ -15,15 +15,11 @@
   font-size: clamp(2.5rem, 4vw + 1rem, 7rem);
   font-weight: 700;
   letter-spacing: 2px;
-  background: -webkit-linear-gradient(
+
     
-    var(--clr-pink),
-    var(--clr-green),
-    var(--clr-yellow),
-    var(--clr-pink)
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    color: var(--clr-pink)
+  ;
+  
   position: relative;
   padding-bottom: 1rem;
   text-align: center;
