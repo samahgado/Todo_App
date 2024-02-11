@@ -2,13 +2,16 @@ import "./ListModal.css";
 import { useTodoStore } from "../../store/TodoStore";
 import Todo from "../todo/Todo";
 import FormTodo from "../formTodo/FormTodo";
+import { useRef } from "react";
 
 const ListModal = () => {
+  const screenWidth = window.innerWidth;
   const activeListId = useTodoStore((state) => state.activListId);
   const lists = useTodoStore((state) => state.lists);
+  const remainingTodos = useTodoStore((state) => state.remainingTodos);
   const activeList = lists.find((list) => list.id === activeListId);
   const deleteList = useTodoStore((state) => state.deleteList);
-  const selectedListId = useTodoStore((state) => state.selectedListId);
+   const selectedListId = useTodoStore((state) => state.selectedListId);
   const handleDeleteList = () => {
     deleteList();
     selectedListId(null);
@@ -17,11 +20,16 @@ const ListModal = () => {
   const remainingTodosNumber = todos?.filter(
     (todo) => todo.completed === false
   ).length;
-  const remainingTodos = useTodoStore((state) => state.remainingTodos);
+  
 
   return (
-    <div className="modal">
+    <>
+    <div className="modal-overlay"></div>
+    <div className="modal-content">
+   
+   
       <div className="modal-header">
+      <p className="close" onClick={()=> selectedListId(null)}>&times;</p>
         <h3 className="modal-header-title">{activeList?.name}</h3>
         <p className="modal-header-remains">
           {remainingTodosNumber && remainingTodosNumber > 0
@@ -31,6 +39,7 @@ const ListModal = () => {
             : ""}
         </p>
       </div>
+      
       <div className="modal-body">
         {todos && todos.length > 0 ? todos?.map((todo) => (
           <Todo todo={todo} key={todo.id} />
@@ -45,7 +54,10 @@ const ListModal = () => {
           </button>
         </div>
       </div>
-    </div>
+      </div>
+    </>
+      
+    
   );
 };
 

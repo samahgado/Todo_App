@@ -37,6 +37,8 @@ body{
     color: var(--clr-white);
     font-family: 'Indie Flower', 'Comic Sans', cursive;
     font-size: var(--fs-small);
-    padding: 2rem;
+    padding: 2rem;height: 100vh;
+    position: relative;
     
 }
+
