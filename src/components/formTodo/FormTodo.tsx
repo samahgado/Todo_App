@@ -1,22 +1,21 @@
-import React, { useState } from "react";
-import "./FormTodo.css";
+import { useState } from "react";
 import { useTodoStore } from "../../store/TodoStore";
 
 const FormTodo = () => {
   const addTodo = useTodoStore((state) => state.addTodo);
-  
+
   const [newTodoName, setNewTodoName] = useState("");
-  const handleChange = (event) => {
+  const handleChange = (event: any) => {
     setNewTodoName(event.target.value);
   };
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: any) => {
     event.preventDefault();
     if (newTodoName.trim() === "") {
-      return; // Prevent adding empty list names
+      return;
     }
     const newTodo = { id: Date.now(), title: newTodoName, completed: false };
 
-    addTodo( newTodo);
+    addTodo(newTodo);
     setNewTodoName("");
   };
   return (

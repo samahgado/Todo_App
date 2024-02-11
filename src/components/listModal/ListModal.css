@@ -44,9 +44,7 @@
   }
 }
 
-
 .modal-header {
- 
   padding-inline: var(--spacer);
   padding-top: 2rem;
   padding-bottom: 1.2rem;
@@ -62,16 +60,14 @@
   position: absolute;
   top: -0.6rem;
   right: 0.8rem;
-  
- 
 }
 @media (min-width: 600px) {
- .close{
-  display: none;
- }
- .modal-header{
-  padding: var(--spacer);
- }
+  .close {
+    display: none;
+  }
+  .modal-header {
+    padding: var(--spacer);
+  }
 }
 .modal-header-title {
   letter-spacing: 1.2px;
@@ -83,7 +79,7 @@
     var(--clr-yellow),
     var(--clr-pink)
   );
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .modal-header-remains {

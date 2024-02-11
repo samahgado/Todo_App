@@ -5,7 +5,7 @@ import { useTodoStore } from "../../store/TodoStore";
 
 const TodoPageComponent = () => {
   const activeListId = useTodoStore((state) => state.activListId);
-  
+
   return (
     <div className="wrapper">
       <header>
@@ -21,7 +21,7 @@ const TodoPageComponent = () => {
       </h1>
       <div className="appContainer">
         <Lists />
-        {activeListId &&  <ListModal />}
+        {activeListId && <ListModal />}
       </div>
     </div>
   );

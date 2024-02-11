@@ -1,4 +1,3 @@
-import React from 'react'
 import "./Lists.css"
 import { useTodoStore } from '../../store/TodoStore'
 import List from '../list/List'

@@ -1,15 +1,16 @@
 .wrapper {
   height: 100%;
   display: grid;
-  --space:2rem;
+  --space: 2rem;
   gap: var(--space);
- margin-block-end: var(--space);
- 
-  
-}.tabs{
-  list-style: none;display: flex;
+  margin-block-end: var(--space);
+}
+.tabs {
+  list-style: none;
+  display: flex;
   gap: 1rem;
-  justify-content: center;font-size: var(--fs-small);
+  justify-content: center;
+  font-size: var(--fs-small);
 }
 .title {
   font-size: clamp(2.5rem, 4vw + 1rem, 7rem);
@@ -22,7 +23,7 @@
     var(--clr-yellow),
     var(--clr-pink)
   );
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;
   padding-bottom: 1rem;
@@ -47,17 +48,15 @@
   left: 50%;
   transform: translate(-50%);
 }
-.appContainer{
+.appContainer {
   display: grid;
   gap: var(--space);
-  
 }
-/* will see container and media kevien you tube */
-@media (min-width:600px){
-  .appContainer{
+
+@media (min-width: 600px) {
+  .appContainer {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
   }
-
 }
